@@ -1,0 +1,153 @@
+/**********************************************
+ Based on the CSS3 snow demo created
+ by Estelle Weyl (@estellevw) available at:
+ http://www.standardista.com/sxsw/
+***********************************************/
+
+/* make sure horizontal scrollbars don't pop up because snowflakes stray over the edge */
+body { 
+	overflow-x: hidden;
+}
+
+/* snowflakes container */
+#snowflakesContainer {
+	top: -15px;
+	position: absolute;
+	width: 100%;
+}
+
+/* default animation and transform */
+.snowflake {
+	position: absolute;
+	display: inline-block;
+	background-color: white;
+	opacity: 0.5;
+	height: 7px;
+	width: 7px;
+	z-index: -1;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-transform-origin: left -20px;
+	-webkit-animation: falling 7.7s linear 2s infinite;
+	-moz-animation: falling 7.7s linear 2s infinite;
+}
+
+/* animation used for ALL snowflakes, 1000px will be updated by Snowflakes.create to reflect true height of window */
+@-webkit-keyframes falling {
+	0% { 
+		-webkit-transform: translate3d(0,0,0) rotate(0deg);
+	}
+	100% { 
+		-webkit-transform: translate3d(0,1000px,0) rotate(360deg);
+	}	
+}
+
+@-moz-keyframes falling {
+	0% { 
+		-moz-transform: translate3d(0,0,0) rotate(0deg);
+	}
+	100% { 
+		-moz-transform: translate(0,1000px) rotate(360deg);
+	}	
+}
+
+/* different sizes, and default origins based on size */
+.snowflakeSizeLRG {
+	height:11px;
+	width:11px;
+	-webkit-transform-origin: left -30px;
+	-moz-transform-origin: left -30px;
+}
+.snowflakeMED {
+	height:9px;
+	width:9px;
+	-webkit-transform-origin: left -30px;
+	-moz-transform-origin: left -30px;
+}
+.snowflakeSizeSM {
+	height:5px;
+	width:5px;
+	-webkit-transform-origin: -30px 0;
+	-moz-transform-origin: -30px 0;
+}
+
+/* different speeds so flakes look just that much different */
+.snowflakeSpeedSlow {
+	-webkit-animation-duration: 7.1s; 
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: -10px -20px;
+	-moz-animation-duration: 7.1s; 
+	-moz-animation-iteration-count: infinite;
+	-moz-transform-origin: -10px -20px;
+}
+.snowflakeSpeedMed {
+	-webkit-animation-duration: 6.6s; 
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: -10px -20px;
+	-moz-animation-duration: 6.6s; 
+	-moz-animation-iteration-count: 12;
+	-moz-transform-origin: -10px -20px;
+}
+.snowflakeSpeedFast {
+	-webkit-animation-duration: 5.9s; 
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: -10px -20px;
+	-moz-animation-duration: 5.9s; 
+	-moz-animation-iteration-count: 12;
+	-moz-transform-origin: -10px -20px;
+}
+
+/* different opacities so flakes look just that much different */
+.snowflakeOpacityFaint {
+	opacity: 0.1;
+}
+.snowflakeOpacityLight {
+	opacity: 0.3;
+}
+.snowflakeOpacityDark {
+	opacity: 0.7;
+}
+
+/* different delays so they don't all start at the same time */
+.snowflakeDelay1 {
+	-webkit-animation-delay: 3.4s;
+	-moz-animation-delay: 3.4s;
+}
+.snowflakeDelay2 {
+	-webkit-animation-delay: 1.5s;
+	-moz-animation-delay: 1.5s;
+}
+.snowflakeDelay3 {
+	-webkit-animation-delay: 4.6s;
+	-moz-animation-delay: 4.6s;
+}
+.snowflakeDelay4 {
+	-webkit-animation-delay: 6.3s;
+	-moz-animation-delay: 6.3s;
+}
+.snowflakeDelay5 {
+	-webkit-animation-delay: 0.4s;
+	-moz-animation-delay: 0.4s;
+}
+.snowflakeDelay6 {
+	-webkit-animation-delay: 8.1s;
+	-moz-animation-delay: 8.1s;
+}
+
+/* playing with timing functions to make it a teeny bit more random like */
+.snowflakeSizeLRG.snowflakeDelay2 {-webkit-animation-timing-function:ease-in-out;}
+.snowflakeSizeLRG.snowflakeDelay1 {-webkit-animation-timing-function:ease-out;}
+.snowflakeSizeLRG.snowflakeDelay2 {-moz-animation-timing-function:ease-in-out;}
+.snowflakeSizeLRG.snowflakeDelay1 {-moz-animation-timing-function:ease-out;}
+
+/* playing with opacity to make it a teeny bit more random like */
+.snowflakeSpeedMed.snowflakeDelay2 {opacity: 0.5}
+.snowflakeSpeedMed.snowflakeDelay1 {opacity: 0.3}
+.snowflakeSpeedFast.snowflakeDelay2 {opacity: 0.7}
+.snowflakeSpeedFast.snowflakeDelay1 {opacity: 0.6;
+	-webkit-animation-timing-function:ease-in;
+	-webkit-transform-origin: left 10px;
+	-moz-animation-timing-function:ease-in;
+	-moz-transform-origin: left 10px;}
+.snowflakeSpeedSlow {opacity: 0.8}

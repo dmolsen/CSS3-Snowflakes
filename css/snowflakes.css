@@ -33,7 +33,6 @@ body {
 	-moz-animation: falling 7.7s linear 2s infinite;
 }
 
-/* animation used for ALL snowflakes, 1000px will be updated by Snowflakes.create to reflect true height of window */
 /* animation used for ALL snowflakes, 1000px will be updated by Snowflakes.create() to reflect true height of window */
 @-webkit-keyframes falling {
 	0% { 
@@ -60,7 +59,6 @@ body {
 	-webkit-transform-origin: left -30px;
 	-moz-transform-origin: left -30px;
 }
-.snowflakeMED {
 .snowflakeSizeMED {
 	height:9px;
 	width:9px;

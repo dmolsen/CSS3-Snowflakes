@@ -61,6 +61,7 @@ body {
 	-moz-transform-origin: left -30px;
 }
 .snowflakeMED {
+.snowflakeSizeMED {
 	height:9px;
 	width:9px;
 	-webkit-transform-origin: left -30px;

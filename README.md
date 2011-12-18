@@ -1,9 +1,6 @@
 CSS3 Snowflakes
 ===============
 
-About
------
-
 This is a simple demo of CSS3-based snowflakes. It is based on [the work of Estelle Weyl](http://www.standardista.com/sxsw/) ([@estellevw](http://twitter.com/estellevw/)). These snowflakes are dynamically created on page load and several effects (_e.g. opacity, size, speed_) are randomly added to each snowflake. The [code is available on GitHub](https://github.com/dmolsen/CSS3-Snowflakes).
 
 Demo
@@ -14,7 +11,7 @@ A [very simple demo of CSS3 snowflakes](http://dmolsen.com/css3-snowflakes/) is 
 Browser Support
 ---------------
 
-This demo should support Safari, Chrome, and Firefox.
+The demo should support Safari, Chrome, and Firefox.
 
 Requirements
 ------------

@@ -34,6 +34,7 @@ body {
 }
 
 /* animation used for ALL snowflakes, 1000px will be updated by Snowflakes.create to reflect true height of window */
+/* animation used for ALL snowflakes, 1000px will be updated by Snowflakes.create() to reflect true height of window */
 @-webkit-keyframes falling {
 	0% { 
 		-webkit-transform: translate3d(0,0,0) rotate(0deg);

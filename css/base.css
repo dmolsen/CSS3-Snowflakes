@@ -21,9 +21,9 @@ a, a:visited {
 #text {
 	position: absolute;
 	z-index: 3;
-	width: 580px;
+	width: 560px;
 	height: 100%;
-	margin: 10px;
+	margin: 20px;
 	color: #fff;
 }
 
@@ -34,6 +34,11 @@ a, a:visited {
 	height: 100%;
 	background-color: #3A6691;
 	opacity: 0.8;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 1px 1px 4px #000;
+	-webkit-box-shadow: 1px 1px 4px #000;
+	box-shadow: 1px 1px 4px #000;
 }
 
 h1 { color: #fc0; }

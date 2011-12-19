@@ -1,14 +1,12 @@
 /* initializes the various classes available for use when creating the snowflakes. classes are in snowflakes.css */
-function Snowflakes() {
+function Snowflakes(_pageContainer,_snowflakesContainer) {
 	this.snowID			= 1;
 	this.sizes			= new Array('', 'snowflakeSizeSM', 'snowflakeSizeMED', 'snowflakeSizeLRG');
 	this.speeds			= new Array('', 'snowflakeSpeedSlow', 'snowflakeSpeedMed', 'snowflakeSpeedFast');
 	this.opacities 		= new Array('', 'snowflakeOpacityFaint', 'snowflakeOpacityLight', 'snowflakeOpacityDark');
 	this.delays			= new Array('', 'snowflakeDelay1', 'snowflakeDelay2', 'snowflakeDelay3', 'snowflakeDelay4', 'snowflakeDelay5', 'snowflakeDelay6');
-	
-	/* these need to be updated to reflect your outermost div (pageContainer) as well as your snowflakes container */
-	this.pageContainer	= document.getElementById('container');
-	this.snowflakesContainer = document.getElementById('snowflakesContainer');
+	this.pageContainer	= document.getElementById(_pageContainer);
+	this.snowflakesContainer = document.getElementById(_snowflakesContainer);
 }
 
 /* simple random number generator */

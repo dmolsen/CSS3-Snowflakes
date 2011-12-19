@@ -9,7 +9,7 @@
 	<script type="text/javascript">
 		var snowflakes;
 		domReady(function() {
-			snowflakes = new Snowflakes(); 	
+			snowflakes = new Snowflakes('container','snowflakesContainer'); 	
 			snowflakes.create(40);
 		});
 	</script>
@@ -39,7 +39,7 @@
 					<code>snowflakes.css</code> in your project. Modify <code>snowflakes.js</code> to include the proper references to the <code>&lt;div&gt;</code>
 					that marks the overall container for your content as well as the <code>&lt;div&gt;</code> from which your snowflakes will fall. Then simply add:
 					<blockquote>
-						<code>var snowflakes = new Snowflakes();<br />snowflakes.create(someNumber);</code> 
+						<code>var snowflakes = new Snowflakes(pageContentDiv,snowflakesHolderDiv);<br />snowflakes.create(someNumber);</code> 
 					</blockquote>
 					to your page to generate the snowflakes.
 				</p>

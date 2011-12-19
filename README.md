@@ -21,10 +21,10 @@ If you decide you want to initialize the snowflakes in your ```<head>``` tag the
 To Use
 ------
 
-If you would like to use CSS3 Snowflakes on your own site (_and who wouldn't?_) simply include ```snowflakes.js``` and ```snowflakes.css``` in your project. Modify ```snowflakes.js``` to include the proper references to the ```<div>``` that marks the overall container for your content as well as the ```<div>``` from which your snowflakes will fall. Then simply add:
+If you would like to use CSS3 Snowflakes on your own site (_and who wouldn't?_) simply include ```snowflakes.js``` and ```snowflakes.css``` in your project. Then modify the code below with the ```<div>``` that marks the overall container for your content as well as the ```<div>``` from which your snowflakes will fall:
 
-```var snowflakes = new Snowflakes();
+```var snowflakes = new Snowflakes(pageContentDiv,snowflakesHolderDiv);
 snowflakes.create(someNumber); 
 ```
 
-to your page to generate the snowflakes.
+and add it to your page to generate the snowflakes.

@@ -13,32 +13,20 @@ a, a:visited {
 	z-index: 2;
 	top: 20px;
 	width: 600px;
-	height: 670px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 #text {
-	position: absolute;
-	z-index: 3;
-	width: 560px;
-	height: 100%;
-	margin: 20px;
-	color: #fff;
-}
-
-#translucentBG {
-	position: absolute;
-	z-index: 2;
-	width: 100%;
-	height: 100%;
-	background-color: #3A6691;
-	opacity: 0.8;
+	width: 600px;
+	padding: 20px;
+	background: rgba(58, 102, 145, 0.8);
+	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
-	-moz-box-shadow: 1px 1px 4px #000;
-	-webkit-box-shadow: 1px 1px 4px #000;
-	box-shadow: 1px 1px 4px #000;
+	-webkit-box-shadow: 1px 1px 4px black;
+	box-shadow: 1px 1px 4px black;
+	color: #fff;
 }
 
 h1 { color: #fc0; }

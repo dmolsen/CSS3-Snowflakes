@@ -20,24 +20,19 @@
                 </p>
                 <h2>Requirements</h2>
                 <p>
-                    If you decide you want to initialize the snowflakes in your <code>&lt;head&gt;</code> tag then you'll need to use a simple
-                    library to tell you when the DOM is ready like <a href="https://github.com/ded/domready">domReady</a>. domReady is 
-                    included and used in the distribution.
+                    If you decide you want to initialize the snowflakes AMD in your <code>&lt;head&gt;</code> tag then you'll need to use a simple
+                    library to tell you when the DOM is ready like <a href="https://github.com/requirejs/domReady/">domReady</a>. Please read <a href="http://requirejs.org/docs/api.html#pageload">the documentation</a> on how to use domReady AMD before using it. The domReady AMD library is NOT included in this distribution, but you can download it at Github.
                 </p>
                 <h2>To Use</h2>
                 <p>
-                    If you would like to use CSS3 Snowflakes on your own site (<em>and who wouldn't?</em>) simply include <code>snowflakes.js</code> and
-                    <code>snowflakes.css</code> in your project. Modify <code>snowflakes.js</code> to include the proper references to the <code>&lt;div&gt;</code>
-                    that marks the overall container for your content as well as the <code>&lt;div&gt;</code> from which your snowflakes will fall. Then simply add:
-                    <blockquote>
-                        <code>var snowflakes = new Snowflakes(pageContentDiv,snowflakesHolderDiv);<br />snowflakes.create(someNumber);</code> 
-                    </blockquote>
-                    to your page to generate the snowflakes.
+                    First you must link <code>snowflakes.css</code> in you head. Then include any AMD loader, like <a href="http://requirejs.org/">RequireJS</a> or <a href="http://dojotoolkit.org/">Dojo Toolkit</a>. Call <code>Snowflakes</code> as a module and modify it to reference the <code>&lt;div&gt;</code>
+                    that marks the overall container for your content as well as the <code>&lt;div&gt;</code> from which your snowflakes will fall. Example:
+                    <script src="https://gist.github.com/3b48caf5bdab2de7f0a2.js"></script>
                 </p>
                 <h2>Some Fun</h2>
                 <p>
-                    You can always <a href="#" onclick="javascript:snowflakes.moreSnow(40);return false;">add more snow</a> to this page to create a blizzard. 
-                    Or <a href="#" onclick="javascript:snowflakes.lessSnow(20);return false;">remove some snow</a> if you think it's too much.
+                    You can always <a href="#" class="change-snow-quantity" id="more-snow">add more snow</a> to this page to create a blizzard. 
+                    Or <a href="#" class="change-snow-quantity" id="less-snow">remove some snow</a> if you think it's too much.
                 </p>
             </div>
             <div id="translucentBG"></div>
@@ -52,6 +47,21 @@
         ], function (Sf) {
             var snowflakes = new Sf('container','snowflakesContainer');     
             snowflakes.create(40);
+
+            // Add/Remove snowflakes
+            var btnsChangeSnowQuantity = document.querySelectorAll('.change-snow-quantity');
+            for(var i = 0, len = btnsChangeSnowQuantity.length; i < len; i++) {
+                btnsChangeSnowQuantity[i].addEventListener('click', function(evt) {
+                    if(this.id === 'more-snow') {
+                        snowflakes.moreSnow(40);
+                    } else if(this.id === 'less-snow') {
+                        snowflakes.lessSnow(20);
+                    }
+
+                    evt.preventDefault();
+                }, false);
+            }
+            
         });
     </script>
 </html>

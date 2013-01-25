@@ -66,7 +66,7 @@ Snowflakes.prototype.create = Snowflakes.prototype.moreSnow = function(snowflake
 		snowflake.setAttribute('id', 'snowId'+this.snowID);
 		snowflake.setAttribute('class', 'snowflake '+size+' '+speed+' '+opacity+' '+delay);
 		snowflake.setAttribute('style','left: '+this.randomFromTo(0, 100)+'%;');
-		snowflakesContainer.appendChild(snowflake);
+		this.snowflakesContainer.appendChild(snowflake);
 		i++;
 		this.snowID++;
 	}

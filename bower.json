@@ -1,0 +1,26 @@
+{
+  "name": "CSS3-Snowflakes",
+  "version": "0.0.0",
+  "homepage": "http://dmolsen.com/css3-snowflakes/",
+  "authors": [
+    "Dave Olsen"
+  ],
+  "description": "Some simple CSS for creating snowflakes as well as some JavaScript for quickly adding them to your website.",
+  "keywords": [
+    "css3",
+    "snowflakes"
+  ],
+  "main": [
+    "js/snowflakes.js",
+    "css/snowflakes.css"
+  ],
+  "license": "???",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
